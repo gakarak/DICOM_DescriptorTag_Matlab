@@ -39,7 +39,7 @@ function [ dscDat, dscIdx, dscSize ] = calc_COO_PNIGAd_V2( img, param )
     imb(imb>(param.nbi-1))=(param.nbi-1);
 % % make binned "gradient" image:
     if param.isGrd
-        ggb=floor(param.nbg*gg/2);
+        ggb=floor(param.nbg*gg*1.1);
         ggb(ggb>(param.nbg-1))=(param.nbg-1);
     end
 % % precalculate some helper parameters
